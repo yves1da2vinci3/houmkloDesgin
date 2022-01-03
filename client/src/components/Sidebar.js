@@ -23,10 +23,11 @@ const [userData,setUserData] = useRecoilState(UserAtom) // recuperation avec pos
     <div className="lg:ml-auto mb-2">
     <Link className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-black font-semibold hover:text-yellow-300" to="/articles">Articles</Link>
       <Link className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-black font-semibold hover:text-yellow-300" to="/ressources">Ressources</Link>
-      <Link className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-black font-semibold hover:text-yellow-300" to="/Team">Travail en equipe</Link>
+      {/* <Link className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-black font-semibold hover:text-yellow-300" to="/lives">Stream design</Link> */}
+      <Link className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-black font-semibold hover:text-yellow-300" to="/publishs">publications</Link>
     {userData?.firstName ? 
-    <div className=""> <Link className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-black font-semibold hover:text-indigo-600" to="/write">rediger article</Link>
-    <Link className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-black font-semibold hover:text-indigo-600" to="/profile">Informations personnelles</Link> </div>
+    <div className=""> <Link className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-black font-semibold hover:text-yellow-300" to="/write">rediger article</Link>
+    <Link className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-black font-semibold hover:text-yellow-300" to="/profile">Informations personnelles</Link> </div>
    : '' }
   
     </div>

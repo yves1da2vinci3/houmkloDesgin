@@ -17,8 +17,11 @@ import ArticleScreen from './screens/ArticleScreen'
 import ProfileScreen from './screens/ProfileScreen'
 import WriteArticle from './screens/WriteArticle'
 import RessourcesScreen from "./screens/RessourcesScreen"
-import TeamScreen from "./screens/TeamScreen"
+import TeamScreen from "./screens/LivesScreen"
 import SearchScreen from './screens/SearchScreen'
+import PublishScreen from './screens/PublishScreen'
+import PublishingScreen from './screens/PublishingScreen'
+import SinglePublishScreen from './screens/SinglePublishScreen'
 import './css/tailwind.css'
 function App() {
   return (
@@ -77,11 +80,20 @@ function App() {
         <Route path="/ressources">
           <RessourcesScreen />
         </Route>
-        <Route path="/Team">
+        <Route path="/lives">
           <TeamScreen />
         </Route>
         <Route path="/search">
           <SearchScreen />
+        </Route>
+        <Route path="/publishs">
+          <PublishScreen />
+        </Route>
+        <Route path="/publishing">
+          <PublishingScreen />
+        </Route>
+        <Route path="/publish/:publishId">
+          <SinglePublishScreen />
         </Route>
         {/* <Route path="/write/:articleId">
           <WriteArticle />

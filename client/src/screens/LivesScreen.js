@@ -1,6 +1,6 @@
 import React from 'react'
 
-function TeamScreen() {
+function LivesScreen() {
     return (
         <div className='flex items-center justify-center h-screen ' >
              <h1 className="text-2xl"> Disponible tres prochainement </h1>
@@ -8,4 +8,4 @@ function TeamScreen() {
     )
 }
 
-export default TeamScreen
+export default LivesScreen

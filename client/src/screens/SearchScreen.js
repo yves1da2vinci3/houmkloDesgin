@@ -12,10 +12,11 @@ import { SpinnerCircular } from 'spinners-react';
 import axios from 'axios'
 function SearchScreen(){
     const [loading,SetLoading] = useState(true);
-    const location = useLocation()
-    const keyword = location.search.split('=')[1]
-    // let keyword = params.keyword
-    // recuperation de l'atome pour le user
+    const Query = useLocation().search
+    console.log(Query)
+    // const keyword = location.search.split('=')[1]
+    const keyword = new URLSearchParams(Query).get('keyword')
+   
     const [articles,setArticles] = useState([])
      // recuperation de l'atome pour le user
   const [userAtom,setUserAtom] = useRecoilState(UserAtom)
@@ -68,16 +69,7 @@ console.log()
     
      
       </div>
-           {/* {loading ? <p className="text-black italic text-2xl text-center mt-10">Chargement ....</p> : (   <div>   <div className="flex flex-wrap -mx-4 mb-12 mt-9">
-{
- articles.map (article => (
-   <Article Title={article.Title} coverImage={article.CoverImage} date={article.publishedDate} description={article.Description} ArticleId={article._id} />
-   ))
-}
 
-
-        </div>
-      </div>)} */}
   
         
         </div>

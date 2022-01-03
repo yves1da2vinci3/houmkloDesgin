@@ -38,10 +38,11 @@ const  userData = userInfo ? userInfo : localStorage.getItem('userInfo')
     <div className="lg:ml-auto">
       <Link className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-black font-semibold hover:text-yellow-300" to="/articles">Articles</Link>
       <Link className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-black font-semibold hover:text-yellow-300" to="/ressources">Ressources</Link>
-      <Link className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-black font-semibold hover:text-yellow-300" to="/Team">Travail en equipe</Link>
+      {/* <Link className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-black font-semibold hover:text-yellow-300" to="/lives">Stream design</Link> */}
+      <Link className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-black font-semibold hover:text-yellow-300" to="/publishs">publications</Link>
       {userData?.firstName ? 
-    <div className="inline-block"> <Link className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-black font-semibold hover:text-yellow-600" to="/write">rediger article</Link>
-    <Link className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-black font-semibold hover:text-yellow-600" to="/profile">Informations personnelles</Link> </div>
+    <div className="inline-block"> <Link className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-black font-semibold hover:text-yellow-300" to="/write">rediger article</Link>
+    <Link className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-black font-semibold hover:text-yellow-300" to="/profile">Informations personnelles</Link> </div>
    : '' }</div>
     { userData?.Pseudo  ? <div className="flex flex-row items-center"> <img className="rounded-full h-12 w-12" src={userData.imgURL} /> <p className=" ml-2 font-semibold text-black">{userData.Pseudo}</p> <p onClick={logoutHandler} className="inline-block py-3 px-5 mr-4 leading-none text-center text-black  bg-yellow-50 hover:bg-indigo-100 font-semibold cursor-pointer rounded ml-1 shadow"> se deconnecter</p>  </div>  :     <div><Link className="inline-block py-3 px-5 mr-4 leading-none text-center text-black  bg-yellow-50 hover:bg-indigo-100 font-semibold rounded shadow" to="/login">Se connecter</Link><Link className="inline-block py-3 px-6 mt-4 lg:mt-0 leading-none text-white bg-yellow-600 hover:bg-yellow-700 font-semibold rounded shadow" to="/signup">S'enregsitrer</Link></div>
 }

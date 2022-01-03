@@ -2,29 +2,25 @@ import React from 'react'
 import axios from 'axios';
 import {useHistory} from 'react-router-dom'
 import dns from '../utils/dns'
-function UserArticle({articleId,date,description,title}) {
-  const history = useHistory();
-     const ViewHandler =  () => {
-      history.push(`/article/${articleId}`)
-     }
-    //  const updateHandler =  () => {
-    //   history.push(`/write/${articleId}`)
-    //  }
-     const deleteHandler = async () => {
-       let confirmBool ;
-        confirmBool =  window.confirm('etes vous sur de vouloir supprimer ?') 
-        if(confirmBool) {
-          axios.delete(`${dns}/api/articles/${articleId}`)
-        }
-        history.push('/')
-     }
+function MyPublish({publishId,Title,Description,ImageUrl}) {
+    const history = useHistory();
+    const ViewHandler =  () => {
+     history.push(`/publish/${publishId}`)
+    }
+    const deleteHandler = async () => {
+        let confirmBool ;
+         confirmBool =  window.confirm('etes vous sur de vouloir supprimer ?') 
+         if(confirmBool) {
+           axios.delete(`${dns}/api/publish/${publishId}`)
+         }
+         history.push('/')
+      }
     return (
         <div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8  cursor-pointer ">
-        <div className="p-6 bg-yellow-50 rounded-lg shadow-md transform hover:-translate-y-4 hover:transition duration-300 " >
-        
-          <span className="inline-block text-xs font-bold text-blue-500">{date}</span>
-          <h2 className="mb-2 text-2xl font-bold font-heading">{title}</h2>
-          <p className="mb-4 text-lg text-gray-500 leading-loose">{description}</p>
+        <div className="p-6 bg-yellow-50  shadow-md transform hover:-translate-y-4 hover:transition duration-300 " >
+         <img src={ImageUrl} className="h-24 object-contain w-full" /> 
+          <h2 className="mb-2 text-2xl font-bold font-heading">{Title}</h2>
+          <p className="mb-4 text-lg text-gray-500 leading-loose">{Description}</p>
         <div className="flex flex-row" >
         <svg onClick={ViewHandler} xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-4 hover:fill-current hover:text-green-600 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -43,4 +39,4 @@ function UserArticle({articleId,date,description,title}) {
     )
 }
 
-export default UserArticle
+export default MyPublish

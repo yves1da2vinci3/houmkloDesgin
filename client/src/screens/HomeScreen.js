@@ -45,10 +45,10 @@ function Home() {
            {/* deuxieme colone */}
            <div className="md:flex  hidden md:flex-col items-center  relative w-48" >
            <div className=" absolute z-10 transform translate-x-32 -translate-y-32 ">
-             <img className="rounded-full shadow-md   w-64 h-64" src="https://global-uploads.webflow.com/5e33a765cf951f99dc204f8b/5e7efe41dc54452ac7eae979_ran-segall.jpeg"/>
+             <img className="rounded-full shadow-md   w-64 h-64" src="https://yt3.ggpht.com/ytc/AKedOLTaEATd7YIMHzgl5s1MsQQ1OUrdNUY1I0nZbs4Z=s176-c-k-c0x00ffffff-no-rj-mo"/>
            </div>
            <div className="absolute transform -translate-x-48 -translate-y-32 ">
-             <img className="rounded-full w-12 h-12 shadow-md  " src="https://tofoot.com/up/2021/10/mercato-dortmund-veut-securiser-erling-haaland-avec-une-offre-folle-mais-le-real-madrid-sinterpose.jpg"/>
+             <img className="rounded-full w-12 h-12 shadow-md  " src="https://teresasempere.neocities.org/Susan/portrait.jpg"/>
            </div>
            <div className="absolute">
              <img className="rounded-full w-72 h-72 shadow-md " src="https://pbs.twimg.com/profile_images/1364268291485622275/w2axzhBT_400x400.jpg"/>
@@ -127,18 +127,18 @@ function Home() {
           {/* premiere colone */}
            <div className=" ml-8 flex flex-col order-3   mt-8" >
             <h1 className=" text-2xl md:text-5xl text-black font-semibold">
-             Travail en equipe
+           Decouvrez des créations
             </h1>
             <h1 className=" text-3xl mb-1 md:text-6xl text-black capitalize font-bold">
-              Avec  Houmklo design 
+              sur Houmklo design 
             </h1>
-            <p className="text-gray-800 text-xl md:text-2xl mt-1 ">Vous souhaitez avoir un environement de designer pour  realiser un <br/> projet design.</p>
-            <p className="text-gray-800 text-xl md:text-2xl mt-1 "> Il sera votre live-share.</p>
+            <p className="text-gray-800 text-xl md:text-2xl mt-1 ">des créations faites <br/> par des jeunes ivoriens comme vous</p>
+           
          <div className=" flex flex-col">
-            <Link  to="/Team"   className="  text-black  font-bold  text-lg md:text-xl mt-4 flex items-center ">Commencer a travailler en equipe <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <Link  to="/publishs"   className="  text-black  font-bold  text-lg md:text-xl mt-4 flex items-center ">Acceder à la gallerie<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
 </svg></Link>
-<span className="h-1 w-64 md:w-96 bg-yellow-400"></span>
+<span className="h-1 w-64 md:w-56 bg-yellow-400"></span>
 </div>
            </div>
 
